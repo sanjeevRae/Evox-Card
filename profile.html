@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | E-VOX Card</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="header-actions">
+                <a href="index.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Home</span>
+                </a>
+                <div class="auth-actions">
+                    <div id="edit-button-container" class="hidden">
+                        <a href="dashboard.html" class="btn-primary">
+                            <i class="fas fa-pencil-alt"></i>
+                            <span>Edit Profile</span>
+                        </a>
+                    </div>
+                    <div id="login-button-container">
+                        <a href="login.html" class="btn-secondary">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Log In</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-card-container">
+            <!-- Main Profile Card -->
+            <div class="profile-card">
+                <div class="card-inner">
+                    <!-- Profile Front -->
+                    <div class="card-front">
+                        <div class="profile-brand">
+                            <div class="logo">E-VOX</div>
+                        </div>
+                        
+                        <div class="profile-photo-container">
+                            <div class="profile-photo">
+                                <img src="images/default-avatar.png" id="profile-photo" alt="Profile Photo">
+                            </div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <h1 id="profile-name">Loading...</h1>
+                            <div class="profile-headline">
+                                <h2 id="profile-title">Loading...</h2>
+                                <p id="profile-company">Loading...</p>
+                            </div>
+                            
+                            <div class="profile-contact-info">
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span id="profile-email">Loading...</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span id="profile-phone">Loading...</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span id="profile-address">Loading...</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <div class="text">
+                                        <a href="#" id="profile-website" target="_blank">Loading...</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-social">
+                                <a href="#" id="profile-linkedin" class="social-icon linkedin" target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" id="profile-facebook" class="social-icon facebook" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" id="profile-instagram" class="social-icon instagram" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" id="profile-twitter" class="social-icon twitter" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" id="profile-youtube" class="social-icon youtube" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="card-actions">
+                                <button class="btn-action flip-btn">
+                                    <span>More Info</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <button class="btn-action save-contact">
+                                    <span>Save Contact</span>
+                                    <i class="fas fa-address-card"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Back -->
+                    <div class="card-back">
+                        <div class="card-header">
+                            <h2>About</h2>
+                            <button class="flip-btn-back">
+                                <i class="fas fa-chevron-left"></i>
+                                <span>Back</span>
+                            </button>
+                        </div>
+                        
+                        <div class="about-section">
+                            <div class="bio">
+                                <h3>Bio</h3>
+                                <p id="profile-bio">Loading...</p>
+                            </div>
+                            
+                            <div class="company-info">
+                                <h3>Company</h3>
+                                <h4 id="company-name">Loading...</h4>
+                                <p id="company-description">Loading...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="qr-section">
+                            <h3>Scan to Save</h3>
+                            <div class="qr-code" id="qrcode"></div>
+                        </div>
+                        
+                        <div class="powered-by">
+                            Powered by <strong>E-VOX</strong> Digital Business Cards
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="profile-actions-fixed">
+            <div class="action-buttons">
+                <button id="share-profile" class="action-button">
+                    <i class="fas fa-share-alt"></i>
+                    <span>Share</span>
+                </button>
+                <button id="download-contact" class="action-button">
+                    <i class="fas fa-download"></i>
+                    <span>Download</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="modal" id="share-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Share Profile</h3>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="share-options">
+                    <a href="#" id="share-facebook-btn" class="share-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" id="share-twitter-btn" class="share-btn twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" id="share-linkedin-btn" class="share-btn linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" id="share-whatsapp-btn" class="share-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="#" id="share-email-btn" class="share-btn email">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+                <div class="share-link">
+                    <input type="text" id="share-url" readonly>
+                    <button id="copy-link-btn" class="btn-secondary">
+                        <i class="fas fa-copy"></i>
+                        <span>Copy</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Contact Modal -->
+    <div class="modal" id="download-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Download Contact</h3>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="download-options">
+                    <button id="download-vcf" class="download-btn">
+                        <i class="fas fa-address-card"></i>
+                        <span>Download vCard</span>
+                        <small>For Apple & Android Contacts</small>
+                    </button>
+                    <button id="download-csv" class="download-btn">
+                        <i class="fas fa-table"></i>
+                        <span>Download CSV</span>
+                        <small>For Excel & Other Programs</small>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Message -->
+    <div class="alert-container">
+        <div class="alert" id="alert-message">
+            <div class="alert-icon">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="alert-content">
+                <p class="alert-text">This is an alert message</p>
+            </div>
+            <button class="alert-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+        <p>Loading profile...</p>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+
+    <!-- QR Code Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    
+    <script src="js/script.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
