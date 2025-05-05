@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | E-VOX Card</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script>
+    // Inline Firebase config to avoid 404 errors
+    const firebaseConfig = {
+      apiKey: "AIzaSyC0DnJ-mh34zCPTVPhCYWUjW5SiGmdPr7c",
+      authDomain: "evox-card.firebaseapp.com",
+      projectId: "evox-card",
+      storageBucket: "evox-card.appspot.com",
+      messagingSenderId: "21012312456",
+      appId: "1:21012312456:web:77c28befacf8d809fc440f"
+    };
+    // Initialize Firebase
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Left Panel - Brand & Features -->
+        <div class="login-brand-panel">
+            <div class="brand-content">
+                <div class="logo">
+                    <img src="images/1.svg" alt="E-VOX Logo" class="company-logo">
+                    <p class="tagline">Your Digital Identity Card</p>
+                </div>
+                
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Professional Digital Card</h3>
+                            <p>Create your digital business card in minutes and share with anyone.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Easy Sharing</h3>
+                            <p>Share via QR code, direct link, or social media with a single click.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Analytics</h3>
+                            <p>Track views, contacts saved, and shares of your digital card.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 E-VOX Card. All rights reserved.
+            </div>
+        </div>
+        
+        <!-- Right Panel - Authentication -->
+        <div class="login-auth-panel">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <a href="index.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to Home</span>
+                    </a>
+                    <h2>Welcome Back</h2>
+                    <p>Sign in to manage your digital card</p>
+                </div>
+                
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="register">Create Account</button>
+                </div>
+                
+                <div class="auth-content">
+                    <!-- Login Form -->
+                    <form id="login-form" class="auth-form active">
+                        <div class="form-group">
+                            <label for="login-email">Email Address</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="login-email" required>
+                            </div>
+                            <div class="error-message" id="login-email-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="login-password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="error-message" id="login-password-error"></div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" id="remember-me">
+                                <span>Remember me</span>
+                            </label>
+                            
+                            <a href="#" id="forgot-password" class="forgot-password">Forgot password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Log In</button>
+                        
+                        <div class="separator">
+                            <span>OR</span>
+                        </div>
+                        
+                        <button type="button" id="google-login" class="btn-social">
+                            <img src="images/google-icon.svg" alt="Google">
+                            <span>Continue with Google</span>
+                        </button>
+                    </form>
+                    
+                    <!-- Register Form -->
+                    <form id="register-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="register-name">Full Name</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="register-name" required>
+                            </div>
+                            <div class="error-message" id="register-name-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-email">Email Address</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="register-email" required>
+                            </div>
+                            <div class="error-message" id="register-email-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="register-password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="error-message" id="register-password-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-confirm-password">Confirm Password</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="register-confirm-password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="error-message" id="register-confirm-password-error"></div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="terms">
+                                <input type="checkbox" id="terms-agreement" required>
+                                <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Create Account</button>
+                        
+                        <div class="separator">
+                            <span>OR</span>
+                        </div>
+                        
+                        <button type="button" id="google-register" class="btn-social">
+                            <img src="images/google-icon.svg" alt="Google">
+                            <span>Sign up with Google</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Modal for Password Reset -->
+            <div class="modal" id="reset-password-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Reset Password</h3>
+                        <button class="modal-close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Enter your email address and we'll send you a link to reset your password.</p>
+                        <form id="reset-password-form">
+                            <div class="form-group">
+                                <label for="reset-email">Email Address</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="reset-email" required>
+                                </div>
+                                <div class="error-message" id="reset-email-error"></div>
+                            </div>
+                            <button type="submit" class="btn-primary">Send Reset Link</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+        <p>Processing, please wait...</p>
+    </div>
+    
+    <!-- Alert Container -->
+    <div class="alert-container"></div>
+    
+    <script src="config.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

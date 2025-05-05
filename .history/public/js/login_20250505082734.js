@@ -1,5 +1,7 @@
-
-firebase.initializeApp(firebaseConfig);
+// Only initialize Firebase if it's not already initialized
+if (typeof firebase !== 'undefined' && !firebase.apps?.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 const auth = firebase.auth();
 
 // DOM Elements
@@ -375,17 +377,53 @@ async function handleGoogleAuth(mode) {
     try {
         showLoading(mode === 'login' ? 'Logging in with Google...' : 'Signing up with Google...');
         
-        // Create Google provider
+        // Create Google provider with additional configuration
         const provider = new firebase.auth.GoogleAuthProvider();
         
-        // Sign in with popup
-        await auth.signInWithPopup(provider);
+        // Add scopes to request additional permissions if needed
+        provider.addScope('profile');
+        provider.addScope('email');
         
-        // Redirect to dashboard
-        window.location.href = 'dashboard.html';
+        // Set custom parameters to specify prompt behavior
+        provider.setCustomParameters({
+            prompt: 'select_account'
+        });
+        
+        // Sign in with popup with proper error handling
+        try {
+            const result = await auth.signInWithPopup(provider);
+            
+            // Get user info from result
+            const user = result.user;
+            console.log("Successfully authenticated with Google:", user.displayName);
+            
+            // Redirect to dashboard
+            window.location.href = 'dashboard.html';
+        } catch (popupError) {
+            // Handle specific popup errors
+            if (popupError.code === 'auth/popup-blocked') {
+                // If popup blocked, try redirect method instead
+                showAlert('Popup was blocked. Trying another method...', 'warning');
+                await auth.signInWithRedirect(provider);
+                return;
+            } else {
+                // Re-throw for the outer catch block
+                throw popupError;
+            }
+        }
     } catch (error) {
         console.error('Google auth error:', error);
-        showAlert('Google authentication failed. Please try again.', 'error');
+        
+        // Show specific error messages
+        if (error.code === 'auth/unauthorized-domain') {
+            showAlert('This domain is not authorized for Firebase authentication. Please contact the site administrator.', 'error');
+        } else if (error.code === 'auth/cancelled-popup-request') {
+            showAlert('Authentication was cancelled.', 'warning');
+        } else if (error.code === 'auth/popup-closed-by-user') {
+            showAlert('Authentication window was closed before completing the sign in.', 'warning');
+        } else {
+            showAlert('Google authentication failed: ' + error.message, 'error');
+        }
     } finally {
         hideLoading();
     }
