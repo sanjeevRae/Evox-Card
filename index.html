@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-VOX | NFC Business Cards</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>E-VOX</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#products">Product</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="./login.html" class="btn-login">Log In</a>
+                <a href="#order" class="btn-primary">Order Now</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-links">
+            <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+            <a href="#features"><i class="fas fa-star"></i> Features</a>
+            <a href="#products"><i class="fas fa-box"></i> Product</a>
+            <a href="#testimonials"><i class="fas fa-quote-right"></i> Testimonials</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+        <div class="mobile-nav-actions">
+            <a href="./login.html" class="btn-secondary">Log In</a>
+            <a href="#order" class="btn-primary">Order Now</a>
+        </div>
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay"></div>
+
+    <main>
+        <!-- Modern Hero Section with 3D Cards -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text animate-on-scroll fade-in">
+                        <span class="hero-badge">Next-Gen Networking</span>
+                        <h1 class="hero-title">Transform Your <span class="gradient-text">Professional</span> Connections</h1>
+                        <p class="hero-description">Share your complete digital profile with a simple tap. E-VOX NFC business cards combine elegant design with cutting-edge technology.</p>
+                        <div class="hero-cta">
+                            <a href="#order" class="btn-primary">Get Your Card</a>
+                            <a href="#video-modal" class="btn-secondary video-trigger">See How It Works <i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">10K+</span>
+                                <span class="stat-label">Happy Users</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">99%</span>
+                                <span class="stat-label">Satisfaction</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual animate-on-scroll slide-in-right">
+                        <div class="card-3d-scene">
+                            <div class="cards-container">
+                                <div class="card-3d card-primary active">
+                                    <img src="images/1.svg" alt="Awddel Card Design" class="card-image">
+                                </div>
+
+                                <div class="card-3d card-primary active">
+                                    <img src="images/2.svg" alt="Awddel Card Design" class="card-image">
+                                </div>
+
+                                <!-- <div class="card-3d card-secondary">
+                                    <img src="images/2.svg" alt="Awddel Card Design 2" class="card-image">
+                                </div> -->
+                            </div>
+                            <div class="slider-arrows">
+                                <div class="slider-arrow prev">
+                                    <i class="fas fa-chevron-left"></i>
+                                </div>
+                                <div class="slider-arrow next">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div class="slider-nav">
+                                <div class="slider-dot active"></div>
+                                <div class="slider-dot"></div>
+                            </div>
+                        </div>
+                        <div class="hero-decoration">
+                            <div class="decoration-circle circle-1"></div>
+                            <div class="decoration-circle circle-2"></div>
+                            <div class="decoration-circle circle-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-features animate-on-scroll fade-in-up">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="feature-text">
+                            <h3>Instant Sharing</h3>
+                            <p>One tap to share your digital profile</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-palette"></i></div>
+                        <div class="feature-text">
+                            <h3>Custom Design</h3>
+                            <p>Personalized to match your brand</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="feature-text">
+                            <h3>Analytics</h3>
+                            <p>Track engagement with your card</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in">
+                    <h2>About <span class="highlight">E-VOX</span></h2>
+                    <p>The future of networking is here</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text animate-on-scroll slide-in-left">
+                        <p><strong>E-VOX</strong> (Environment Voice) is revolutionizing the way professionals connect in the digital age. Our premium NFC business cards combine elegant design with cutting-edge technology, allowing you to share your complete digital profile with a simple tap.</p>
+                        <p>Founded in 2025, E-VOX was born from the vision to eliminate paper waste while enhancing networking capabilities. Our motto "<em>Sustainable Connections for a Digital Future</em>" reflects our commitment to eco-friendly networking solutions.</p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">500K+</div>
+                                <div class="stat-label">Paper Cards Saved</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">60%</div>
+                                <div class="stat-label">Carbon Footprint Reduction</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Recyclable Materials</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual animate-on-scroll slide-in-right">
+                        <div class="interaction-container">
+                            <h3 class="interaction-title">How It Works</h3>
+                            <div class="interaction-steps">
+                                <div class="interaction-step" id="step1">
+                                    <div class="step-number">1</div>
+                                    <div class="step-description">Tap your E-VOX card on any smartphone</div>
+                                </div>
+                                <div class="interaction-step" id="step2">
+                                    <div class="step-number">2</div>
+                                    <div class="step-description">NFC technology instantly transfers your data</div>
+                                </div>
+                                <div class="interaction-step" id="step3">
+                                    <div class="step-number">3</div>
+                                    <div class="step-description">Your complete profile appears on their screen</div>
+                                </div>
+                            </div>
+                            <div class="interaction-scene">
+                                <div class="phone-mockup">
+                                    <div class="phone-frame">
+                                        <div class="phone-screen">
+                                            <div class="profile-content">
+                                                <div class="profile-header">
+                                                    <div class="profile-avatar"></div>
+                                                    <div class="profile-info">
+                                                        <h4>Meena Gurung</h4>
+                                                        <p>Marketing Director</p>
+                                                    </div>
+                                                </div>
+                                                <div class="profile-body">
+                                                    <div class="profile-item">
+                                                        <i class="fas fa-envelope"></i>
+                                                        <span>meena@gmail.com</span>
+                                                    </div>
+                                                    <div class="profile-item">
+                                                        <i class="fas fa-phone"></i>
+                                                        <span>+977 9876543210</span>
+                                                    </div>
+                                                    <div class="profile-item">
+                                                        <i class="fas fa-globe"></i>
+                                                        <span>www.meena.com</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-mockup">
+                                    <div class="card-face">
+                                        <div class="card-logo">E-VOX</div>
+                                        <div class="card-chip"><i class="fas fa-wifi"></i></div>
+                                        <div class="card-name">Meena Gurung</div>
+                                        <div class="card-title">Marketing Director</div>
+                                    </div>
+                                </div>
+                                <div class="connection-animation">
+                                    <div class="connection-wave"></div>
+                                    <div class="connection-wave"></div>
+                                    <div class="connection-wave"></div>
+                                </div>
+                            </div>
+                            <div class="interaction-controls">
+                                <button class="demo-button" id="playDemo">
+                                    <i class="fas fa-play-circle"></i> See How It Works
+                                </button>
+                                <div class="interaction-hint">
+                                    <i class="fas fa-hand-pointer"></i>
+                                    <span>Click to see the demonstration or hover over the scene</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section with Bento Grid -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in">
+                    <h2>Why Choose <span class="highlight">E-VOX</span></h2>
+                    <p>Features that set us apart</p>
+                </div>
+                <div class="bento-grid">
+                    <div class="bento-item large animate-on-scroll fade-in-up" data-delay="0">
+                        <div class="bento-content">
+                            <div class="icon"><i class="fas fa-bolt"></i></div>
+                            <h3>Instant Sharing</h3>
+                            <p>Share your contact information, social media profiles, portfolio, and more with just one tap. No apps required for the recipient.</p>
+                        </div>
+                        <div class="bento-image">
+                            <div class="image-container">
+                                <div class="floating-icon"><i class="fas fa-share-alt"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-item animate-on-scroll fade-in-up" data-delay="100">
+                        <div class="icon"><i class="fas fa-palette"></i></div>
+                        <h3>Custom Designs</h3>
+                        <p>Choose from premium templates or create your own custom design that reflects your brand identity.</p>
+                        <div class="feature-badge">Premium</div>
+                    </div>
+                    <div class="bento-item animate-on-scroll fade-in-up" data-delay="200">
+                        <div class="icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Track when and how often your card is scanned with detailed engagement metrics.</p>
+                        <div class="feature-badge">Pro</div>
+                    </div>
+                    <div class="bento-item animate-on-scroll fade-in-up" data-delay="300">
+                        <div class="icon"><i class="fas fa-lock"></i></div>
+                        <h3>Enterprise Security</h3>
+                        <p>Your data is encrypted and protected with enterprise-grade security protocols.</p>
+                        <div class="feature-badge">Secure</div>
+                    </div>
+                    <div class="bento-item animate-on-scroll fade-in-up" data-delay="400">
+                        <div class="icon"><i class="fas fa-edit"></i></div>
+                        <h3>Real-time Updates</h3>
+                        <p>Change your information anytime without ordering new cards. Updates reflect instantly.</p>
+                    </div>
+                    <div class="bento-item large animate-on-scroll fade-in-up" data-delay="500">
+                        <div class="bento-content">
+                            <div class="icon eco-icon"><i class="fas fa-leaf"></i></div>
+                            <h3>Eco-Friendly Solution</h3>
+                            <p>E-VOX (Environment Voice) is committed to sustainability. Our durable NFC cards replace hundreds of traditional paper business cards, reducing waste and environmental impact.</p>
+                        </div>
+                        <div class="bento-image">
+                            <div class="eco-stats">
+                                <div class="eco-stat">
+                                    <span class="eco-number">100+</span>
+                                    <span class="eco-label">Paper Cards Saved</span>
+                                </div>
+                                <div class="eco-stat">
+                                    <span class="eco-number">60%</span>
+                                    <span class="eco-label">Carbon Footprint Reduction</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in">
+                    <h2>Our <span class="highlight">Product</span> </h2>
+                    <p>For Direct Purchase</p>
+
+                <div class="product-cards">
+                    <div class="product-card animate-on-scroll fade-in-up" data-delay="0">
+                        <div class="product-image">
+                            <img src="./images/standard.svg" alt="Standard E-VOX Card">
+                            <div class="product-badge">Popular</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Standard</h3>
+                            <p>Our classic NFC business card with essential features.</p>
+                            <div class="product-price">Rs500</div>
+                            <a href="#order" class="btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="product-card featured animate-on-scroll fade-in-up" data-delay="200">
+                        <div class="product-image">
+                            <img src="./images/premium.svg" alt="Premium E-VOX Card">
+                            <div class="product-badge">Best Value</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Premium</h3>
+                            <p>Enhanced design options with advanced analytics.</p>
+                            <div class="product-price">Rs900</div>
+                            <a href="#order" class="btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="product-card animate-on-scroll fade-in-up" data-delay="400">
+                        <div class="product-image">
+                            <img src="./images/executive.svg" alt="EliteE-VOX Card">
+                            <div class="product-badge">Top Rated</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Elite</h3>
+                            <p>Luxury metal cards with premium finishes and all features.</p>
+                            <div class="product-price">Rs1500</div>
+                            <a href="#order" class="btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in">
+                    <h2>What Our <span class="highlight">Clients Say</span></h2>
+                    <p>Success stories from professionals using E-VOX</p>
+                </div>
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>"E-VOX has completely transformed how I network at industry events. The number of follow-ups I receive has increased by 300% since switching to these NFC cards."</p>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-2.svg" alt="Ram ">
+                                <div class="author-info">
+                                    <h4>Ram Shrestha</h4>
+                                    <p>Marketing Director, XYZ Company</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>"As a designer, I needed a business card that reflected my aesthetic sensibilities. E-VOX delivered with their custom design option, and the NFC functionality impresses every client."</p>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-1.svg" alt=" Meena">
+                                <div class="author-info">
+                                    <h4>Meena Gurung</h4>
+                                    <p>Creative Director, Design Studio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>"The analytics feature has been invaluable for our sales team. We can now see exactly when prospects engage with our information and follow up at the perfect time."</p>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-3.svg" alt="Bibek">
+                                <div class="author-info">
+                                    <h4>Bibek Bhandari</h4>
+                                    <p>Sales Manager, XYZ Inc</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-controls">
+                        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                        <div class="testimonial-dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                        </div>
+                        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-it-works-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in">
+                    <h2>How <span class="highlight">It Works</span></h2>
+                    <p>Simple steps to get started with E-VOX</p>
+                </div>
+                <div class="steps">
+                    <div class="step animate-on-scroll slide-in-right" data-delay="0">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Order Your Card</h3>
+                            <p>Choose your design and customize your E-VOX card to match your brand.</p>
+                        </div>
+                    </div>
+                    <div class="step animate-on-scroll slide-in-right" data-delay="150">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Set Up Your Profile</h3>
+                            <p>Add your contact information, social media links, portfolio, and more to your digital profile.</p>
+                        </div>
+                    </div>
+                    <div class="step animate-on-scroll slide-in-right" data-delay="300">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Share with a Tap</h3>
+                            <p>Simply tap your card on any smartphone to instantly share your information.</p>
+                        </div>
+                    </div>
+                    <div class="step animate-on-scroll slide-in-right" data-delay="450">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Track Engagement</h3>
+                            <p>Monitor when and how often your card is scanned through our analytics dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <div class="cta-content animate-on-scroll fade-in">
+                    <h2>Ready to Transform Your Networking?</h2>
+                    <p>Join thousands of professionals who have upgraded to E-VOX NFC business cards.</p>
+                    <a href="#order" class="btn-primary">Get Started Today</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in">
+                    <h2>Get in <span class="highlight">Touch</span></h2>
+                    <p>We'd love to hear from you</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info animate-on-scroll slide-in-left">
+                        <div class="info-item">
+                            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h3>Address</h3>
+                                <p>Lamtangeen Marg & 14, Baluwatar, Kathmandu, Nepal</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@evox-cards.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>977 01-4526821/4528947</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-x"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form animate-on-scroll slide-in-right">
+                        <form id="contactForm" class="php-email-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Send Message</button>
+                            
+                            <div class="form-group">
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- EmailJS functionality -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("C-c_ieBFgoEKweILO");
+      })();
+  
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const userEmail = document.getElementById("email").value;
+        const userMessage = document.getElementById("message").value;
+        const fullMessage = `From: ${userEmail}\n\n${userMessage}`;
+        const formData = {
+          name: document.getElementById("name").value,
+          email: userEmail,
+          subject: document.getElementById("subject").value,
+          message: fullMessage
+        };
+  
+        emailjs.send("service_wje2o1f", "template_oa0ipsl", formData)
+          .then(function(response) {
+            console.log("SUCCESS!", response.status, response.text);
+            document.querySelector(".sent-message").style.display = "block";
+            document.getElementById("contactForm").reset();
+          }, function(error) {
+            console.log("FAILED...", error);
+            document.querySelector(".error-message").style.display = "block";
+          });
+      });
+    </script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>E-VOX</h2>
+                        <p>The future of networking</p>
+                    </div>
+                    <div class="footer-contact">
+                        <ul class="contact-list">
+                            <li><i class="fas fa-map-marker-alt"></i> Lamtangeen Marg & 14, Baluwatar Kathmandu, Nepal</li>
+                            <li><i class="fas fa-phone"></i> 977 01-4526821/4528947</li>
+                            <li><i class="fas fa-envelope"></i> info@evox.com</li>
+                        </ul>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-x"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#press">Press</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#standard">Standard Card</a></li>
+                        <li><a href="#premium">Premium Card</a></li>
+                        <li><a href="#executive">Elite Card</a></li>
+                        <li><a href="#corporate">Corporate Solutions</a></li>
+                        <li><a href="#custom">Custom Designs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#guides">User Guides</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#support">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <script>
+                    window.onload = function() {
+                      var now = new Date();
+                      var year = now.getFullYear();
+                      document.getElementById("date").innerHTML = year;
+                    };
+                </script>
+                <p>&copy; <span id="date">2025</span> <strong class="px-1 sitename">E-VOX.</strong> <span>All Rights Reserved</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="order-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <h2>Order Your <span class="highlight">E-VOX</span> Card</h2>
+            <div class="popup-body">
+                <div class="order-options">
+                    <div class="order-option-tabs">
+                        <button class="option-tab active" data-option="standard">Standard</button>
+                        <button class="option-tab" data-option="premium">Premium</button>
+                        <button class="option-tab" data-option="executive">Elite</button>
+                    </div>
+                    <div class="option-details active" id="standard-details">
+                        <div class="option-image">
+                            <img src="images/standard.svg" alt="Standard E-VOX Card">
+                        </div>
+                        <div class="option-info">
+                            <h3>Standard Card</h3>
+                            <p>Our classic NFC business card with essential features.</p>
+                            <ul class="option-features">
+                                <li><i class="fas fa-check"></i> Personalized Card</li>
+                                <li><i class="fas fa-check"></i> Unlimited Sharing</li>
+                                <li><i class="fas fa-check"></i> Update Anytime</li>
+                                
+                                <li><i class="fas fa-check"></i> Limited Contact Details, Social Media links, etc</li>
+                                <li><i class="fas fa-check"></i> Cost Rs 100 per card if need to re-print in case of damage</li>    
+                            
+                            </ul>
+                            <div class="option-price">Rs500</div>
+                        </div>
+                    </div>
+                    <div class="option-details" id="premium-details">
+                        <div class="option-image">
+                            <img src="images/premium.svg" alt="Premium E-VOX Card">
+                        </div>
+                        <div class="option-info">
+                            <h3>Premium Card</h3>
+                            <p>Enhanced design options with advanced analytics.</p>
+                            <ul class="option-features">
+                                <li><i class="fas fa-check"></i> All Standard Features</li>
+                                <li><i class="fas fa-check"></i> Custom Design Options</li>
+                                <li><i class="fas fa-check"></i> Analytics and Insights</li>
+                                <li><i class="fas fa-check"></i> Unlimited Contact Details, Bio, etc</li>
+                                <li><i class="fas fa-check"></i> Up to two cards can be reprinted for free, after that, each damaged card will cost Rs 50</li>
+                                    
+                            </ul>
+                            <div class="option-price">Rs900</div>
+                        </div>
+                    </div>
+                    <div class="option-details" id="executive-details">
+                        <div class="option-image">
+                            <img src="images/executive.svg" alt="EliteE-VOX Card">
+                        </div>
+                        <div class="option-info">
+                            <h3>Elite Card</h3>
+                            <p>   Advanced security cards with premium finishes and all features.</p>
+                            <ul class="option-features">
+                                <li><i class="fas fa-check"></i> All Premium Features</li>
+                                <li><i class="fas fa-check"></i> Custom Design Options</li>
+                                <li><i class="fas fa-check"></i> Limited team trials available</li>
+                                <li><i class="fas fa-check"></i> Advanced security, integration, and authentication</li>
+                                <li><i class="fas fa-check"></i> Unlimited replacement in the case of damage, but not in the situation of mishandling</li>
+                               
+                            </ul>
+                            <div class="option-price">Rs1500</div>
+                        </div>
+                    </div>
+                </div>
+                <form id="orderForm" class="order-form">
+                    <div class="form-group">
+                        <label for="order-name">Full Name</label>
+                        <input type="text" id="order-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-email">Email</label>
+                        <input type="email" id="order-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-phone">Phone</label>
+                        <input type="tel" id="order-phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-address">Shipping Address</label>
+                        <textarea id="order-address" name="address" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-quantity">Quantity</label>
+                        <input type="number" id="order-quantity" name="quantity" min="1" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-notes">Special Instructions (Optional)</label>
+                        <textarea id="order-notes" name="notes" rows="2"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <script src="js/script.js"></script>
+    
+    <!-- Video Modal -->
+    <div id="video-modal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-video">&times;</span>
+            <div class="video-container">
+                <iframe src="about:blank" data-src="https://www.youtube.com/embed/QDeSLUJaCj0?si=bPbXpem7PyC2OIg3" title="YouTube video player" frameborder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
